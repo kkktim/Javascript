@@ -1,0 +1,73 @@
+<!--
+    날짜 : 2022/02/15
+    이름 : 강태호
+    내용 : 슬라이더 애니메이션 함수 실습하기
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>3.슬라이더 애니메이션</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<style>
+    section {
+        position: relative;
+        width: 280px;
+        height: 390px;
+        border: 1px solid red;
+        margin: 200px auto;
+        overflow: hidden;
+    }
+    section > div {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border: 1px solid blue;
+    }
+    /*세로로 올라가는거
+    section > div:nth-child(1) {left: 0; top: 0;}
+    section > div:nth-child(2) {left: 0; top: 100%;}
+    section > div:nth-child(3) {left: 0; top: 200%;}
+    */
+
+    section > div:nth-child(1) {left: 0; top: 0;}
+    section > div:nth-child(2) {left: 100%; top: 0;}
+    section > div:nth-child(3) {left: 200%; top: 0;}
+</style>
+<script>
+    $(function(){
+        let sliders = $('section > div')
+        let i = 0
+        // 세로로 올라가는거
+        // setInterval(function(){
+        //     // 0, 1, 2, 0
+        //     sliders.eq(i).animate({'top':'-100%'}, 1000)
+        //     i++
+        //     if(i == 3){
+        //         i = 0
+        //     }
+        //     // 1, 2, 0, 1
+        //     sliders.eq(i).css('top', '100%').animate({'top':'0%'}, 1000)
+
+        // }, 3000);
+
+        setInterval(function(){
+            sliders.eq(i).animate({'left':'-100%'}, 1000)
+            i++
+            if(i == 3){
+                i = 0
+            }
+            sliders.eq(i).css('left', '100%').animate({'left':'0%'}, 1000)
+        }, 3000)
+    })
+</script>
+</head>
+<body>
+    <h3>3.슬라이더 애니메이션</h3>
+    <section>
+        <div><img src="./img/1.jpg" alt="1"></div>
+        <div><img src="./img/2.jpg" alt="2"></div>
+        <div><img src="./img/3.jpg" alt="3"></div>
+    </section>
+</body>
+</html>
