@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>p324</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+    $(function(){
+        $.ajax({
+            url:'./js/MOCK_DATA.json',
+            dataType:'json',
+            success: function(data){
+                
+                //alert(data.length);
+                if(data.length > 0){
+                    let tb = $('<table/>')
+                    for(let i in data){
+                        let $id = data[i].id
+                        let $first_name = data[i].first_name
+                        let $last_name = data[i].last_name
+                        let $email = data[i].email
+                        let $gender = data[i].gender
+                        
+                        let row = $('<tr/>').append(
+                            $('<td/>').text($id),
+                            $('<td/>').text($first_name),
+                            $('<td/>').text($last_name),
+                            $('<td/>').text($email),
+                            $('<td/>').text($gender)
+                        )
+                        tb.append(row)
+                    }
+                    $('.wrap').append(tb)
+                }
+            }
+        })
+    })
+</script>
+</head>
+<body>
+    <div class="wrap"></div>
+    
+</body>
+</html>
