@@ -14,13 +14,14 @@
 	- ch09 제이쿼리 비동기 방식 연동
 	
 ## _JsStudy_
-- Sub1 Js helloworld
-- Sub2 Js 기본문법
-- Sub3 Js 함수
-- Sub4 Js 객체
-- Sub5 jQuery 기본
-- Sub6 jQuery 함수
-- Sub7 jQuery 이벤트
-- Sub8 jQuery 애니메이션
-- Sub9 Ajax 통신
+- 수업 예제
+	- Sub1 Js helloworld
+	- Sub2 Js 기본문법
+	- Sub3 Js 함수
+	- Sub4 Js 객체
+	- Sub5 jQuery 기본
+	- Sub6 jQuery 함수
+	- Sub7 jQuery 이벤트
+	- Sub8 jQuery 애니메이션
+	- Sub9 Ajax 통신
 ------
